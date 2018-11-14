@@ -18,6 +18,7 @@
     "no-redundant-jsdoc": false,
     "prefer-type-cast": false,
     "no-console": false,
+    "no-octal-literal": false,
     "no-any": false,
     "prefer-template": false,
     "no-function-expression": false,

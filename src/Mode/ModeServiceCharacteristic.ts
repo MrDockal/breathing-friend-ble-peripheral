@@ -1,5 +1,6 @@
 import * as bleno from 'bleno';
 import { objectValues } from '../core/objectValues';
+import { modes } from '../core/storageMocks';
 
 export interface BreathingDefinition {
 	uid: string;
@@ -24,42 +25,11 @@ export class ModeServiceCharacteristic extends bleno.Characteristic {
 					value: 'Stored breathing modes as json encoded',
 				})
 			]
-		})
+		});
 	}
 
 	public onReadRequest(offset: number, callback: (result: number, data?: Buffer) => void) {
-		const modes: BreathingDefinition[] = [{
-			uid: '271',
-			speed: 0,
-			cycleSpeedStart: 2,
-			cycleSpeedEnd: 2,
-			duration: 2,
-			freqIn: 2,
-			freqHold1: 2,
-			freqOut: 2,
-			freqHold2: 2,
-		}, {
-			uid: '272',
-			speed: 0,
-			cycleSpeedStart: 3,
-			cycleSpeedEnd: 3,
-			duration: 3,
-			freqIn: 3,
-			freqHold1: 3,
-			freqOut: 3,
-			freqHold2: 3,
-		}, {
-			uid: '273',
-			speed: 0,
-			cycleSpeedStart: 4,
-			cycleSpeedEnd: 4,
-			duration: 4,
-			freqIn: 4,
-			freqHold1: 4,
-			freqOut: 4,
-			freqHold2: 4,
-		}];
-		const stringified = this.encodeModesForBluetoothBuffer(modes);
+		const stringified = this.encodeModesForBluetoothBuffer();
 		const buf = Buffer.from(stringified.slice(offset), 'utf8');
 		callback(this.RESULT_SUCCESS, buf);
 	}
@@ -92,7 +62,7 @@ export class ModeServiceCharacteristic extends bleno.Characteristic {
 		}
 	}
 
-	private encodeModesForBluetoothBuffer(modes: BreathingDefinition[]) {
+	private encodeModesForBluetoothBuffer() {
 		const simplyfied = modes.map((mode: BreathingDefinition) => objectValues(mode));
 		return JSON.stringify(simplyfied);
 	}
