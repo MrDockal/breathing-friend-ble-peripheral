@@ -3,7 +3,7 @@ import { Stat, stats } from '../core/storageMocks';
 
 type SubscribeCallback = (data?: Buffer) => void;
 
-export class StatsServiceCharacteristict extends bleno.Characteristic {
+export class StatsServiceCharacteristic extends bleno.Characteristic {
 
 	private subscribeCallback: SubscribeCallback;
 	private maxValueSize: number;
