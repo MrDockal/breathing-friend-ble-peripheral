@@ -13,7 +13,7 @@ export interface BreathingDefinition {
 };
 
 export const modes: BreathingDefinition[] = [{
-	uid: '271',
+	uid: 'abc01',
 	speed: 0,
 	cycleSpeedStart: 2,
 	cycleSpeedEnd: 2,
@@ -23,7 +23,7 @@ export const modes: BreathingDefinition[] = [{
 	freqOut: 2,
 	freqHold2: 2,
 }, {
-	uid: '272',
+	uid: 'abc02',
 	speed: 0,
 	cycleSpeedStart: 3,
 	cycleSpeedEnd: 3,
@@ -33,7 +33,7 @@ export const modes: BreathingDefinition[] = [{
 	freqOut: 3,
 	freqHold2: 3,
 }, {
-	uid: '273',
+	uid: 'abc03',
 	speed: 0,
 	cycleSpeedStart: 4,
 	cycleSpeedEnd: 4,
@@ -51,51 +51,51 @@ export interface Stat {
 };
 
 export const stats: Stat[] = [{
-	modeUid: '271',
+	modeUid: 'abc01',
 	timestampStart: fakerStatic.date.past().getTime(),
 	timestampEnd: fakerStatic.date.past().getTime(),
 }, {
-	modeUid: '271',
+	modeUid: 'abc01',
 	timestampStart: fakerStatic.date.past().getTime(),
 	timestampEnd: fakerStatic.date.past().getTime(),
 }, {
-	modeUid: '271',
+	modeUid: 'abc01',
 	timestampStart: fakerStatic.date.past().getTime(),
 	timestampEnd: fakerStatic.date.past().getTime(),
 }, {
-	modeUid: '272',
+	modeUid: 'abc01',
 	timestampStart: fakerStatic.date.past().getTime(),
 	timestampEnd: fakerStatic.date.past().getTime(),
 }, {
-	modeUid: '272',
+	modeUid: 'abc01',
 	timestampStart: fakerStatic.date.past().getTime(),
 	timestampEnd: fakerStatic.date.past().getTime(),
 }, {
-	modeUid: '272',
+	modeUid: 'abc02',
 	timestampStart: fakerStatic.date.past().getTime(),
 	timestampEnd: fakerStatic.date.past().getTime(),
 }, {
-	modeUid: '272',
+	modeUid: 'abc02',
 	timestampStart: fakerStatic.date.past().getTime(),
 	timestampEnd: fakerStatic.date.past().getTime(),
 }, {
-	modeUid: '272',
+	modeUid: 'abc02',
 	timestampStart: fakerStatic.date.past().getTime(),
 	timestampEnd: fakerStatic.date.past().getTime(),
 }, {
-	modeUid: '273',
+	modeUid: 'abc02',
 	timestampStart: fakerStatic.date.past().getTime(),
 	timestampEnd: fakerStatic.date.past().getTime(),
 }, {
-	modeUid: '273',
+	modeUid: 'abc02',
 	timestampStart: fakerStatic.date.past().getTime(),
 	timestampEnd: fakerStatic.date.past().getTime(),
 }, {
-	modeUid: '273',
+	modeUid: 'abc03',
 	timestampStart: fakerStatic.date.past().getTime(),
 	timestampEnd: fakerStatic.date.past().getTime(),
 }, {
-	modeUid: '273',
+	modeUid: 'abc03',
 	timestampStart: fakerStatic.date.past().getTime(),
 	timestampEnd: fakerStatic.date.past().getTime(),
 }];
