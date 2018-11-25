@@ -37,28 +37,16 @@ export class ModeServiceCharacteristic extends bleno.Characteristic {
 	public onWriteRequest(
 		data: Buffer,
         offset: number,
-        withoutResponse: boolean,
+        _withoutResponse: boolean,
         callback: (result: number) => void
 	) {
 		if (offset) {
 			console.log('this.RESULT_ATTR_NOT_LONG')
 			callback(this.RESULT_ATTR_NOT_LONG);
 		} else {
-			const modeDefinitions = data.readUInt8(0);
-			console.log(modeDefinitions);
-			switch (modeDefinitions) {
-				case 0:
-				case 1:
-				case 2:
-					if (!withoutResponse) {
-						callback(this.RESULT_SUCCESS);
-					}
-				break;
-				default:
-				if (!withoutResponse) {
-					callback(this.RESULT_UNLIKELY_ERROR);
-				}
-			}
+			const decoded = String.fromCharCode.apply(null, new Uint16Array(data));
+			console.log(decoded);
+			callback(this.RESULT_SUCCESS);
 		}
 	}
 
