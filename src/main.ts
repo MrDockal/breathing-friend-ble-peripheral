@@ -12,6 +12,7 @@ const statsServices = new StatService();
 const currentTimeService = new CurrentTimeService();
 
 bleno.on('stateChange', (state: any) => {
+    console.log('_____________');
     console.log('state', state);
     if (state === 'poweredOn') {
       bleno.startAdvertising('Breathing friend', [batteryService.uuid, deviceService.uuid, modeService.uuid, statsServices.uuid, currentTimeService.uuid]);
@@ -21,11 +22,11 @@ bleno.on('stateChange', (state: any) => {
 });
 
 bleno.on('advertisingStart', (error?: Error) => {
-    console.log('on -> advertisingStart: ' + (error ? 'error ' + error : 'success'));
-
+    console.log('advertisingStart: ' + (error ? 'error ' + error : 'success'));
     if (!error) {
       bleno.setServices([batteryService, deviceService, modeService, statsServices, currentTimeService], function(error2?: Error){
         console.log('setServices: '  + (error2 ? 'error ' + error2 : 'success'));
+        console.log('_____________\n\n');
       });
     }
 });

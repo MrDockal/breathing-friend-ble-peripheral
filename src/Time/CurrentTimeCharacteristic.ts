@@ -12,6 +12,7 @@ export class CurrentTimeCharacteristic extends bleno.Characteristic {
 	public onReadRequest(_offset: number, callback: (result: number, data?: Buffer) => void) {
 		const now = new Date();
 		const buf = Buffer.from(now.valueOf().toString(), 'utf8');
+		console.log('Reading current time', now.valueOf().toString(), '\n\n');
 		callback(this.RESULT_SUCCESS, buf);
 	}
 
@@ -27,7 +28,7 @@ export class CurrentTimeCharacteristic extends bleno.Characteristic {
 		} else {
 			const decoded = String.fromCharCode.apply(null, new Uint16Array(data));
 			const date = new Date(parseInt(decoded));
-			console.log(decoded);
+			console.log('Saving current time', date.toISOString(), '\n\n');
 			callback(this.RESULT_SUCCESS);
 		}
 	}

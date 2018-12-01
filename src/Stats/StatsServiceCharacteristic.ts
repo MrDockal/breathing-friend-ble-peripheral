@@ -29,6 +29,7 @@ export class StatsServiceCharacteristic extends bleno.Characteristic {
         _withoutResponse: boolean,
         callback: (result: number) => void
 	) {
+		console.log('Subscribe triggered, sending statistics \n\n');
 		this.stats.forEach((stat: Stat) => {
 			const message = JSON.stringify([stat.modeUid, stat.timestampStart, stat.timestampEnd]) + "\0";
 			let offset = 0;

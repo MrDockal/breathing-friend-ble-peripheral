@@ -52,50 +52,50 @@ export interface Stat {
 
 export const stats: Stat[] = [{
 	modeUid: 'abc01',
-	timestampStart: fakerStatic.date.past().getTime(),
-	timestampEnd: fakerStatic.date.past().getTime(),
+	timestampStart: fakerStatic.date.recent(1).getTime(),
+	timestampEnd: fakerStatic.date.recent(2).getTime(),
 }, {
 	modeUid: 'abc01',
-	timestampStart: fakerStatic.date.past().getTime(),
-	timestampEnd: fakerStatic.date.past().getTime(),
+	timestampStart: fakerStatic.date.recent(1).getTime(),
+	timestampEnd: fakerStatic.date.recent(2).getTime(),
 }, {
 	modeUid: 'abc01',
-	timestampStart: fakerStatic.date.past().getTime(),
-	timestampEnd: fakerStatic.date.past().getTime(),
+	timestampStart: fakerStatic.date.recent(1).getTime(),
+	timestampEnd: fakerStatic.date.recent(2).getTime(),
 }, {
 	modeUid: 'abc01',
-	timestampStart: fakerStatic.date.past().getTime(),
-	timestampEnd: fakerStatic.date.past().getTime(),
+	timestampStart: fakerStatic.date.recent(1).getTime(),
+	timestampEnd: fakerStatic.date.recent(2).getTime(),
 }, {
 	modeUid: 'abc01',
-	timestampStart: fakerStatic.date.past().getTime(),
-	timestampEnd: fakerStatic.date.past().getTime(),
+	timestampStart: fakerStatic.date.recent(1).getTime(),
+	timestampEnd: fakerStatic.date.recent(2).getTime(),
 }, {
 	modeUid: 'abc02',
-	timestampStart: fakerStatic.date.past().getTime(),
-	timestampEnd: fakerStatic.date.past().getTime(),
+	timestampStart: fakerStatic.date.recent(1).getTime(),
+	timestampEnd: fakerStatic.date.recent(2).getTime(),
 }, {
 	modeUid: 'abc02',
-	timestampStart: fakerStatic.date.past().getTime(),
-	timestampEnd: fakerStatic.date.past().getTime(),
+	timestampStart: fakerStatic.date.recent(1).getTime(),
+	timestampEnd: fakerStatic.date.recent(2).getTime(),
 }, {
 	modeUid: 'abc02',
-	timestampStart: fakerStatic.date.past().getTime(),
-	timestampEnd: fakerStatic.date.past().getTime(),
+	timestampStart: fakerStatic.date.recent(1).getTime(),
+	timestampEnd: fakerStatic.date.recent(2).getTime(),
 }, {
 	modeUid: 'abc02',
-	timestampStart: fakerStatic.date.past().getTime(),
-	timestampEnd: fakerStatic.date.past().getTime(),
+	timestampStart: fakerStatic.date.recent(1).getTime(),
+	timestampEnd: fakerStatic.date.recent(2).getTime(),
 }, {
 	modeUid: 'abc02',
-	timestampStart: fakerStatic.date.past().getTime(),
-	timestampEnd: fakerStatic.date.past().getTime(),
+	timestampStart: fakerStatic.date.recent(1).getTime(),
+	timestampEnd: fakerStatic.date.recent(2).getTime(),
 }, {
 	modeUid: 'abc03',
-	timestampStart: fakerStatic.date.past().getTime(),
-	timestampEnd: fakerStatic.date.past().getTime(),
+	timestampStart: fakerStatic.date.recent(1).getTime(),
+	timestampEnd: fakerStatic.date.recent(2).getTime(),
 }, {
 	modeUid: 'abc03',
-	timestampStart: fakerStatic.date.past().getTime(),
-	timestampEnd: fakerStatic.date.past().getTime(),
+	timestampStart: fakerStatic.date.recent(1).getTime(),
+	timestampEnd: fakerStatic.date.recent(2).getTime(),
 }];

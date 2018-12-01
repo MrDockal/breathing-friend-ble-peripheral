@@ -31,6 +31,7 @@ export class ModeServiceCharacteristic extends bleno.Characteristic {
 	public onReadRequest(offset: number, callback: (result: number, data?: Buffer) => void) {
 		const stringified = this.encodeModesForBluetoothBuffer();
 		const buf = Buffer.from(stringified.slice(offset), 'utf8');
+		console.log('Reading mode characteristics \n\n');
 		callback(this.RESULT_SUCCESS, buf);
 	}
 
@@ -45,7 +46,7 @@ export class ModeServiceCharacteristic extends bleno.Characteristic {
 			callback(this.RESULT_ATTR_NOT_LONG);
 		} else {
 			const decoded = String.fromCharCode.apply(null, new Uint16Array(data));
-			console.log(decoded);
+			console.log('WRITE mode characteristics', decoded, '\n\n');
 			callback(this.RESULT_SUCCESS);
 		}
 	}

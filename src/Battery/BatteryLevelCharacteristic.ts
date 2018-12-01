@@ -11,6 +11,7 @@ export class BatteryLevelCharacteristic extends bleno.Characteristic {
 
 	public onReadRequest(_offset: number, callback: (result: number, data?: Buffer) => void) {
 		const buf = Buffer.from('60', 'utf8'); //60% of battery
+		console.log('Reading battery characteristics \n\n');
 		callback(this.RESULT_SUCCESS, buf);
 	}
 }
