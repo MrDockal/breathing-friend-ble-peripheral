@@ -1,6 +1,6 @@
 # Intro
 Mock peripheral Bluetooth communication on device.
-Related project React native App [Breathing friend](https://github.com/MrDockal/breathing-friend)
+Related project React native App [Breathing friend](https://github.com/MrDockal/breathing-friend-app)
 
 # bleno [copied from original repository](https://github.com/noble/bleno)
 
